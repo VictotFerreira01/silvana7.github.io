@@ -1,0 +1,1107 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "arial";
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+html,body{
+	height: 100%;
+}
+
+:root{
+    --bg-color:#fff;
+    --box-shadow:2px 2px 18px rgb(14 52 54 / 15%);
+}
+
+img{
+    width: 100%;
+}
+
+.menu{
+    width: 100%;
+    height: 100px;
+}
+
+.menu ul{
+    float: right;
+    display: flex;
+    padding-right: 200px;
+}
+
+.menu ul li{
+    margin: 35px 20px;
+    list-style-type: none;
+}
+
+.menu ul li a{
+    align-items: center;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 17px;
+    color: #5e6a82;
+    z-index: 1;
+}
+.menu ul li a:hover{
+    color: #ff5e00;
+}
+
+.login-buttom{
+    position: relative;
+    float: right;
+    z-index: 2;
+    top: -75px;
+    left: -37px;
+}
+
+.login-buttom input[type=submit]{
+width: 120px;
+height: 40px;
+border-radius: 10px;
+border: 1px solid #ff5e00;
+color: white;
+background-color: #ff5e00;
+transition: 0.5s;
+cursor: pointer;
+}
+
+.login-buttom input[type=submit]:hover{
+transform: scale(1.1,1.1);
+}
+
+
+
+.clear{
+    clear: both;
+}
+
+header{
+    width: 100%;
+    max-width: 2560px;
+    height: 526px;
+    min-height: 426px;
+    background-image: url("banner11.png");
+    background-position: top;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    z-index: 0;
+    /*clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100% );*/
+} 
+
+
+.pesquisa form{
+    position: relative;
+    justify-content: center;
+    max-width: 320px;
+    width: 100%;
+    margin: 80px auto 30px;
+    top: -510px;
+    left: -320px;
+    z-index: 1;
+}
+.pesquisa input[type=text]{
+    position: relative;
+    width: 500px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    /*cursor: pointer; */
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #CCC;
+    z-index: 0;
+}
+
+    
+/*Botão selecionar imovel*/
+
+.container{
+    position: relative;
+    justify-content: center;
+    max-width: 320px;
+    width: 100%;
+    margin: 80px auto 30px;
+    top: -640px;
+    right: -200px;
+}
+.select-btn{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #CCC;
+}
+.select-btn .btn-text{
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+}
+.select-btn .arrow-dwn{
+    display: flex;
+    height: 21px;
+    width: 21px;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 50%;
+    background: #ff5e00;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.select-btn.open .arrow-dwn{
+    transform: rotate(-180deg);
+}
+.list-items{
+    position: relative;
+    margin-top: 15px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 10;
+}
+.select-btn.open ~ .list-items{
+    display: block;
+}
+.list-items .item{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0 15px;
+    border-radius: 8px;
+}
+.list-items .item:hover{
+    background-color: #e7edfe;
+}
+.item .item-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+.item .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    margin-right: 12px;
+    border: 1.5px solid #c0c0c0;
+    transition: all 0.3s ease-in-out;
+}
+.item.checked .checkbox{
+    background-color: #ff5e00;
+    border-color: #ff5e00;
+}
+.checkbox .check-icon{
+    color: #fff;
+    font-size: 11px;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+.item.checked .check-icon{
+    transform: scale(1);
+}
+/*Botão selecionar imovel*/
+
+
+/*botão buscar*/
+
+.botao-buscar{
+    position: relative;
+    padding: 0 2%;
+    float: right;
+    top: -595px;
+    left: -240px;
+}
+
+.botao-buscar input[type=submit]{
+width: 120px;
+height: 60px;
+border-radius: 10px;
+border: 1px solid #ff5e00;
+color: white;
+background-color: #ff5e00;
+transition: 0.5s;
+cursor: pointer;
+}
+
+.botao-buscar input[type=submit]:hover{
+transform: scale(1.1,1.1);
+}
+
+/*botão buscar*/
+
+.clear{
+    clear: both;
+}
+/*background container*/
+.background-container{
+    display: inline-block;
+    padding: 0 2%;
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    height: 100px;
+    background: white;
+    right: -230px;
+    top: -350px;
+    border-radius: 20px;
+}
+/*
+.comprar-alugar{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    left: 40px;
+}
+.comprar-alugar ul{
+    display: flex;
+}
+
+.comprar-alugar ul li{
+    padding-top: 15px;
+    margin: 0 40px;
+    list-style-type: none;
+}
+
+.comprar-alugar ul li a{
+    align-items: center;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 17px;
+    color: #5e6a82;
+}
+.comprar-alugar ul li a:hover{
+    background: #ff5e00;
+    background-size: 200px;
+    color: white;
+
+}
+*/
+/*background container*/
+
+
+/*medias queries*/
+
+@media screen and (max-width: 2560px){
+    .botao-buscar{
+        position: relative;
+        top: -595px;
+        left: -660px;   
+    }
+    .background-container{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 1120px;
+        height: 100px;
+        background: white;
+        right: -731px;
+        top: -350px;
+        border-radius: 20px;
+    }
+}
+    @media screen and (max-width: 2499px){
+        .botao-buscar{
+            position: relative;
+            display: inline-block;
+            top: -595px;
+            left: -650px; 
+        }
+        .background-container{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 1120px;
+            height: 100px;
+            background: white;
+            right: -705px;
+            top: -350px;
+            border-radius: 20px;
+        }
+    }
+    @media screen and (max-width: 2411px){
+        .background-container{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 1120px;
+            height: 100px;
+            background: white;
+            right: -661px;
+            top: -350px;
+            border-radius: 20px;
+        }
+        .botao-buscar{
+            position: relative;
+            display: inline-block;
+            top: -595px;
+            left: -600px; 
+        }
+    }
+    @media screen and (max-width: 2326px){
+        .background-container{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 1120px;
+            height: 100px;
+            background: white;
+            right: -611px;
+            top: -350px;
+            border-radius: 20px;
+        }
+        .botao-buscar{
+            position: relative;
+            display: inline-block;
+            top: -595px;
+            left: -570px; 
+        }
+    }
+    @media screen and (max-width: 2273px){
+        .background-container{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 1120px;
+            height: 100px;
+            background: white;
+            right: -600px;
+            top: -350px;
+            border-radius: 20px;
+        } 
+        .botao-buscar{
+            position: relative;
+            display: inline-block;
+            top: -595px;
+            left: -550px; 
+        }
+    }
+    @media screen and (max-width: 2231px){
+        .background-container{
+            right: -570px;
+        }
+        .botao-buscar{
+            left: -500px; 
+        }
+    }
+    @media screen and (max-width: 2154px){
+        .background-container{
+            right: -540px;
+        }
+        .botao-buscar{
+            left: -450px; 
+        }
+    }
+    @media screen and (max-width: 2084px){
+        .background-container{
+            right: -500px;
+        }
+    }
+
+    @media screen and (max-width: 2002px){
+        .background-container{
+            right: -460px;
+        }
+        .botao-buscar{
+            left: -400px; 
+        }
+    }
+
+    @media screen and (max-width: 2001px){
+        .background-container{
+            right: -450px;
+        }   
+    }
+
+    @media screen and (max-width: 1920px){
+        .pesquisa form{
+            position: relative;
+            justify-content: center;
+            max-width: 320px;
+            width: 100%;
+            margin: 80px auto 30px;
+            top: -510px;
+            left: -320px;
+        }
+        .container{
+            position: relative;
+            justify-content: center;
+            max-width: 320px;
+            width: 100%;
+            margin: 80px auto 30px;
+            top: -640px;
+            right: -200px;
+        }
+        .botao-buscar{
+            position: relative;
+            display: inline-block;
+            top: -595px;
+            left: -350px;     
+        } 
+        .background-container{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 1120px;
+            height: 100px;
+            background: white;
+            right: -410px;
+            top: -350px;
+            border-radius: 20px;
+        }
+    }
+
+    @media screen and (max-width: 1827px){
+        .background-container{
+            right: -350px;
+        }
+        .botao-buscar{
+            left: -330px; 
+        }
+    }
+
+    @media screen and (max-width: 1804px){
+        .botao-buscar{
+            position: relative;
+            display: inline-block;
+            top: -595px;
+            left: -300px;    
+        }
+        .background-container{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 1120px;
+            height: 100px;
+            background: white;
+            right: -350px;
+            top: -350px;
+            border-radius: 20px;
+        }
+    }
+
+    @media screen and (max-width: 1697px) {
+        .botao-buscar{
+            position: relative;
+            display: inline-block;
+            top: -595px;
+            left: -280px;    
+        } 
+        .background-container{
+            right: -290px;  
+        }
+    }
+    @media screen and (max-width: 1680px){
+        .botao-buscar{
+            position: relative;
+            display: inline-block;
+            top: -595px;
+            left: -210px;    
+        }
+        .background-container{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 1120px;
+            height: 100px;
+            background: white;
+            right: -310px;
+            top: -350px;
+            border-radius: 20px;
+        }
+    }
+    @media screen and (max-width: 1620px){
+        .background-container{
+            right: -270px;
+        }
+    }
+    @media screen and (max-width: 1540px){
+        .pesquisa form{
+            position: relative;
+            justify-content: center;
+            max-width: 320px;
+            width: 100%;
+            margin: 80px auto 30px;
+            top: -510px;
+            left: -320px;
+        }
+        .container{
+            position: relative;
+            justify-content: center;
+            max-width: 320px;
+            width: 100%;
+            margin: 80px auto 30px;
+            top: -640px;
+            right: -200px;
+        } 
+        .botao-buscar{
+            position: relative;
+            display: inline-block;
+            top: -595px;
+            left: -210px;    
+        }
+        .background-container{
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            max-width: 1120px;
+            height: 100px;
+            background: white;
+            right: -235px;
+            top: -350px;
+            border-radius: 20px;
+        }
+    
+}
+
+@media screen and (max-width: 1539px){
+    .pesquisa form{
+        position: relative;
+        justify-content: center;
+        max-width: 320px;
+        width: 100%;
+        margin: 80px auto 30px;
+        top: -510px;
+        left: -320px;
+    }
+    .container{
+        position: relative;
+        justify-content: center;
+        max-width: 320px;
+        width: 100%;
+        margin: 80px auto 30px;
+        top: -640px;
+        right: -200px;
+    } 
+    .botao-buscar{
+        position: relative;
+        top: -595px;
+        left: -240px;   
+    }
+    .background-container{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 1120px;
+        background: white;
+        right: -230px;
+        top: -350px;
+        border-radius: 20px;
+    }
+}
+@media screen and (max-width: 1440px){
+    .botao-buscar{
+        position: relative;
+        top: -595px;
+        left: -140px; 
+    }
+    .background-container{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 1120px;
+        background: white;
+        right: -165px;
+        top: -350px;
+        border-radius: 20px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .pesquisa form{
+        position: relative;
+        justify-content: center;
+        max-width: 320px;
+        width: 100%;
+        margin: 80px auto 30px;
+        top: -609px;
+        left: -250px;
+    }
+    .container{
+        position: relative;
+        justify-content: center;
+        max-width: 320px;
+        width: 100%;
+        margin: 80px auto 30px;
+        top: -740px;
+        right: -260px;
+    } 
+    .background-container{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        height: 200px;
+        background: white;
+        right: -50px;
+        top: -355px;
+        border-radius: 20px;
+    }
+    .botao-buscar{
+        position: relative;
+        top: -595px;
+        left: -330px; 
+    }
+    .botao-buscar input[type=submit]{
+        width: 320px;
+        height: 60px;
+        border-radius: 10px;
+        border: 1px solid #ff5e00;
+        color: white;
+        background-color: #ff5e00;
+        transition: 0.5s;
+        cursor: pointer;
+        }
+        
+    .botao-buscar input[type=submit]:hover{
+        width: 330px;
+        height: 70px;
+        }
+}
+@media screen and (max-width: 545px){
+    header{
+        background-position: left;
+        height: 426px;/*Alterei aqui*/
+        min-height: 326px;
+    }
+    .pesquisa form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 320px;
+        width: 100%;
+        margin: 80px auto 30px;
+        top: -509px;
+        left: -10px;
+    }
+    .pesquisa input[type=text]{
+        position: relative;
+        width: 350px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        border-radius: 8px;
+        /*cursor: pointer; */
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #CCC;
+    }
+    .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 80px auto 30px;
+        top: -590px;
+        left: 2px;
+    } 
+    .background-container{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 480px;
+        height: 210px;
+        background: white;
+        right: -23px;
+        top: -230px;
+        border-radius: 20px;
+        box-shadow: var(--box-shadow);
+    }
+    .botao-buscar{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: -470px;
+        left: -90px; 
+    }
+    .botao-buscar input[type=submit]{
+        width: 320px;
+        height: 60px;
+        border-radius: 10px;
+        border: 1px solid #ff5e00;
+        color: white;
+        background-color: #ff5e00;
+        transition: 0.5s;
+        cursor: pointer;
+        }
+        
+    .botao-buscar input[type=submit]:hover{
+        width: 320px;
+        height: 60px;
+        }
+}
+@media screen and (max-width: 400px){
+     .pesquisa form{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 320px;
+        width: 100%;
+        margin: 80px auto 30px;
+        top: -509px;
+        left: -16px;
+    }
+    .pesquisa input[type=text]{
+        position: relative;
+        width: 350px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        border-radius: 8px;
+        /*cursor: pointer; */
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #CCC;
+    }
+    .container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 80px auto 30px;
+        top: -590px;
+        left: -2px;
+    } 
+    .background-container{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        max-width: 380px;
+        height: 210px;
+        background: white;
+        right: -10px;
+        top: -230px;
+        border-radius: 20px;
+        box-shadow: var(--box-shadow);
+    }
+    .botao-buscar{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: -470px;
+        left: -34px; 
+    }
+    .botao-buscar input[type=submit]{
+        width: 320px;
+        height: 60px;
+        border-radius: 10px;
+        border: 1px solid #ff5e00;
+        color: white;
+        background-color: #ff5e00;
+        transition: 0.5s;
+        cursor: pointer;
+        }
+        
+    .botao-buscar input[type=submit]:hover{
+        width: 320px;
+        height: 60px;
+        }
+}
+@media screen and (max-width: 337px){
+    .pesquisa form{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       max-width: 320px;
+       width: 100%;
+       margin: 80px auto 30px;
+       top: -509px;
+       left: 0px;
+   }
+   .pesquisa input[type=text]{
+       position: relative;
+       width: 320px;
+       outline: none;
+       border: none;
+       font-size: 15px;
+       display: flex;
+       height: 50px;
+       align-items: center;
+       justify-content: space-between;
+       padding: 0 16px;
+       border-radius: 8px;
+       /*cursor: pointer; */
+       background-color: #fff;
+       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+       border: 1px solid #CCC;
+   }
+   .container{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       width: 100%;
+       margin: 80px auto 30px;
+       top: -590px;
+       left: 1px;
+   } 
+   .background-container{
+       display: inline-block;
+       position: relative;
+       width: 100%;
+       max-width: 330px;
+       height: 210px;
+       background: white;
+       right: -4px;
+       top: -230px;
+       border-radius: 20px;
+       box-shadow: var(--box-shadow);
+   }
+   .botao-buscar{
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       top: -470px;
+       left: 0px; 
+   }
+   .botao-buscar input[type=submit]{
+       width: 320px;
+       height: 60px;
+       border-radius: 10px;
+       border: 1px solid #ff5e00;
+       color: white;
+       background-color: #ff5e00;
+       transition: 0.5s;
+       cursor: pointer;
+       }
+       
+   .botao-buscar input[type=submit]:hover{
+       width: 320px;
+       height: 60px;
+       }
+}
+
+/*medias queries*/
+
+/*.casa-aqui{
+    position: absolute;
+    bottom: 300px;
+    right: 40%;
+    font-size: 17px;
+    color: black;
+}*/
+.casa-aqui{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.casa-aqui h2{
+    font-size: 1.7rem;
+}
+.propriedades{
+    width: 100%;
+    position: absolute;
+    top: 650px;
+    background: #fbfbfb;
+    border-radius: 2rem;
+    padding-bottom: 60px;
+}
+.propriedades-container{
+    /*position: relative;
+    text-align: center;
+    display: flex;*/
+    display: grid;
+    /*margin: 2rem;*/
+    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+    gap: 3rem;
+    padding: 0 50px;
+}
+.propriedades-container .box{
+    /*min-width: 300px;*/
+    background: var(--bg-color);
+    padding: 10px;
+    margin: 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: 0.3s all ease;
+    /*-webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;*/
+}
+
+.propriedades-container .box:hover{
+    transform: translateY(-10px);    
+    transition: 0.5s;
+}
+.propriedades-container .box.slick-center{
+    transform: scale(1.1);
+}
+.propriedades-container .box.slick-center:hover{
+    transform: translateY(-10px);
+}
+.propriedades-container .box img{
+    border-radius: 1rem;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+.propriedades-container .box h3{
+    position: relative;
+    bottom: -10px;
+    font-size: 1rem;
+    font-weight: 600;
+    float: right;
+}
+.propriedades-container .box .content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.propriedades-container .box .content .text h3{
+    position: relative;
+    top: -20px;
+    left: -12px;
+    font-weight: 500;
+}
+.propriedades-container .box .content .text p{
+    position: relative;
+    top: -9px;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+.propriedades-container .box .content .icon{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+.propriedades-container .box .content .icon .bx{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.propriedades-container .box .content .icon span{
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 4px;
+}
+.icon-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-arrow i{
+    margin: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 545px){
+    .propriedades{
+        top: 550px;  
+    }
+}
+@media screen and (max-width: 400px){
+    .propriedades{
+        left: -23px;  
+    }
+    .casa-aqui h2{
+        position: relative;
+        left: 20px;
+}
+}
+@media screen and (max-width: 337px){
+    .propriedades{
+        left: -50px;  
+    }
+    .casa-aqui h2{
+        position: relative;
+        left: 45px;
+    }
+    .propriedades-container .box{
+        width: 90%;
+        position: relative;
+        left: 11px;
+    }
+}
+
+/*sobre*/
+/*
+.sobre{
+    width: 100%;
+    position: absolute;
+    top: 2160px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem,auto));
+    gap: 2rem;
+}
+.sobre-img img{
+    border-radius: 3rem 0 3rem 3rem;
+    max-height: 500px;
+    margin-left: 55px;
+}
+.sobre-text{
+    margin-left: 55px;
+    margin-top: 100px;
+}
+.sobre-text span{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ff5e00;
+}
+.sobre-text h2{
+    margin-top: 10px;
+    font-size: 1.7rem;
+}
+.sobre-text p{
+    font-size: 0.938rem;
+    margin: 1rem 0 1rem; 
+}
+.btn-sobre{
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ff5e00;
+    color: white;
+    background-color: #ff5e00;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn-sobre:hover{
+    transform: scale(1.1,1.1);
+}
+
+*/
+
+/*sobre*/
+
+

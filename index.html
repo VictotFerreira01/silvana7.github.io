@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css"/>
+     <!-- Fontawesome CDN Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+     <!--box1 icons-->
+     <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+  <!--slick slider css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Monte sinai</title>
+
+</head>
+<body>
+    
+    <div class="menu">
+        <ul>
+            <li><a href="">Comprar</a></li>
+            <li><a href="">Alugar</a></li>
+            <li><a href="">Lançamentos</a></li>
+            <li><a href="">Descobrir</a></li>
+            <li><a href="">Financiamento</a></li>
+            <li><a href="">Anunciar</a></li>
+        </ul>
+    </div><!--menu-->
+
+    <div class="clear"></div><!--clear-->
+
+
+    <div class="login-buttom">
+        <input type="submit" name="login" value="Entrar" />
+    </div>
+
+    <!--<div class="clear"></div><!--clear-->
+    
+<div class="header-completo">   
+
+<header></header>
+
+<div class="background-container">
+   <!--- <div class="comprar-alugar">
+        <ul>
+            <li><a href="">Comprar</a></li>
+            <li><a href="">Alugar</a></li>
+        </ul>
+    </div><!--comprar-alugar-->
+</div><!--background-container-->
+
+
+
+  <!--campo de pesquisa autocomplete -->
+  <div id="pesquisa" class="pesquisa">
+    <form action="">
+        <Input type="text" id="input-pesquisa" placeholder="Digite uma cidade, bairro ou uma característica (Ex: Piscina)" />
+
+        <!--<div class="lupa-pesquisa">
+        <i class="fa-solid fa-magnifying-glass" style="color: #ff5e00;"></i>
+        </div><!--lupa-pesquisa-->  
+   </form>
+  </div><!--pesquisa-->
+
+  <!--<div class="lupa">
+    <i class="fa-solid fa-magnifying-glass" style="color: #ff5e00;"></i>
+  </div>-->
+  
+
+    <!--campo de pesquisa autocomplete -->
+
+    <div id="botao-buscar" class="botao-buscar">
+        <input type="submit" name="buscar" value="Buscar" />
+    </div>
+
+
+
+  <!--Botão selecionar imovel-->
+  <!--teste-->
+
+  <div id="container" class="container">
+    <div class="select-btn">
+        <span class="btn-text">Selecione os imóveis</span>
+        <span class="arrow-dwn">
+            <i class="fa-solid fa-chevron-down"></i>
+        </span>
+    </div>
+
+    <ul class="list-items">
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">Todos os imóveis</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">Casa</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">Apartamento</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">Casa de condomínio</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">Cobertura</span>
+        </li>
+        <li class="item">
+            <span class="checkbox">
+                <i class="fa-solid fa-check check-icon"></i>
+            </span>
+            <span class="item-text">Terreno</span>
+        </li>
+    </ul>
+</div>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+<script src="jquery/jquery.js"></script>
+<script src="jquery/functions.js"></script>
+<script src="jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js" integrity="sha512-h9kKZlwV1xrIcr2LwAPZhjlkx+x62mNwuQK5PAu9d3D+JXMNlGx8akZbqpXvp0vA54rz+DrqYVrzUGDMhwKmwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js" integrity="sha512-fDGBclS3HUysEBIKooKWFDEWWORoA20n60OwY7OSYgxGEew9s7NgDaPkj7gqQcVXnASPvZAiFW8DiytstdlGtQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</div><!--header-completo-->
+
+    <!--teste-->
+    <!--Botão selecionar imovel-->
+
+    <!--botão buscar-->
+
+   
+
+
+
+    <!--botão buscar-->
+
+
+    <div class="clear"></div><!--clear-->
+
+  
+<section class="propriedades pcontainer" id="propriedades">
+    <div class="casa-aqui">
+        <h2>Lançamentos</h2>
+    </div><!--casa-aqui-->
+    <div class="propriedades-container pcontainer">
+            <!--box1-->
+        <div class="box">
+            <img src="img/p1.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box1---->
+
+        <!--box2-->
+        <div class="box">
+            <img src="img/p2.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box2---->
+
+         <!--box3-->
+         <div class="box">
+            <img src="img/p3.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box3---->
+
+        <!--box4-->
+        <div class="box">
+            <img src="img/p4.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box4---->
+
+         <!--box5-->
+         <div class="box">
+            <img src="img/p5.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box5---->
+
+        <!--box6-->
+        <div class="box">
+            <img src="img/p6.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box6---->
+
+         <!--box7-->
+         <div class="box">
+            <img src="img/p6.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box7---->
+
+         <!--box8-->
+         <div class="box">
+            <img src="img/p6.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box8---->
+
+         <!--box9-->
+         <div class="box">
+            <img src="img/p6.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box9---->
+
+         <!--box10-->
+         <div class="box">
+            <img src="img/p6.jpg" alt="">
+            <h3>R$ 1.420.000</h3>
+            <div class="content">
+                <div class="text">
+                    <h3>Prédio Up Life</h3>
+                    <p>Tucuruvi, São Paulo</p>
+                </div><!--text-->
+                <div class="icon">
+                    <i class='bx bx-bed'><span>5</span></i>
+                    <i class='bx bx-bath' ><span>2</span></i>
+                </div><!--icon-->
+            </div><!--content-->
+        </div><!--box10---->
+
+    </div><!--propriedades pcontainer-->
+
+    <div class="icon-arrow">
+        <i id="arrow-prev" class="fa-solid fa-arrow-left" style="color: #fe5500;"></i>
+        <i id="arrow-next" class="fa-solid fa-arrow-right" style="color: #ff5e00;"></i>
+    </div><!--icon-arrow-->
+
+</section><!--propriedades-->
+
+<div class="clear"></div>
+
+<!--sobre-->
+
+<!--<section class="sobre pcontainer" id="sobre">
+
+    <div class="sobre-img">
+        <img src="img/sobre.jpg" alt="">
+    </div><!--sobre-img-->
+
+    <!--<div class="sobre-text">
+        <span>Sobre Nós</span>
+        <h2>Nós Temos a Melhor <br>Propriedade Para Você !</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Qui obcaecati alias, vitae eos facere fugiat?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Qui obcaecati alias, vitae eos facere fugiat?</p>
+        <p>Lorem ipsum dolor sit amet, 
+            consectetur adipisicing elit. Reiciendis, id.</p>
+        <button href="#" class="btn-sobre">Veja Mais</button>            
+    </div><!--sobre-text-->
+
+<!--</section><!--sobre pcontainer-->
+
+<!--sobre-->
+
+
+
+
+
+
+</body>
+</html>
